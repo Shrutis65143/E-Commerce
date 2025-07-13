@@ -36,7 +36,7 @@ const PlaceOrder = () => {
     setFormData((data) => ({ ...data, [name]: value }));
   };
 
-  const initPay = (order) => {
+  const initPay = (order, orderId) => {
     const options = {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: order.amount,
@@ -49,7 +49,7 @@ const PlaceOrder = () => {
         try {
           const { data } = await axios.post(
             backendUrl + '/api/order/verifyRazorpay',
-            { ...response, userId: localStorage.getItem('userId') },
+            { ...response, userId: localStorage.getItem('userId'), razorpay_order_id: order.id },
             { headers: { token } }
           );
 
@@ -57,7 +57,7 @@ const PlaceOrder = () => {
             toast.success("Payment successful and order placed!");
             setCartItems({});
           } else {
-            toast.error("Payment failed or incomplete.");
+            toast.warn("Order saved. Payment is still pending.");
           }
           navigate('/orders');
         } catch (error) {
@@ -100,10 +100,11 @@ const PlaceOrder = () => {
         address: formData,
         items: orderItems,
         amount: getCartAmount() + delivery_fee,
+        paymentMethod: method
       };
 
       switch (method) {
-        case 'cod':
+        case 'cod': {
           const codRes = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { token } });
           if (codRes.data.success) {
             toast.success("Order placed successfully!");
@@ -113,30 +114,31 @@ const PlaceOrder = () => {
           }
           navigate('/orders');
           break;
+        }
 
-        case 'stripe':
+        case 'stripe': {
           const stripeRes = await axios.post(backendUrl + '/api/order/stripe', orderData, { headers: { token } });
           if (stripeRes.data.success && stripeRes.data.session_url) {
-            setCartItems({});
+            toast.info("Redirecting to payment...");
             window.location.replace(stripeRes.data.session_url);
           } else {
             toast.error(stripeRes.data.message || "Stripe session creation failed.");
+            navigate('/orders');
           }
-          navigate('/orders')
           break;
+        }
 
-        case 'razorpay':
+        case 'razorpay': {
           const razorRes = await axios.post(backendUrl + '/api/order/razorpay', orderData, { headers: { token } });
           if (razorRes.data.success) {
-            setCartItems({})
             toast.info("Order created. Proceed to payment...");
-            initPay(razorRes.data.order);
+            initPay(razorRes.data.order, razorRes.data.order._id);
           } else {
             toast.error("Failed to initiate Razorpay order");
+            navigate('/orders');
           }
-          navigate('/orders')
           break;
-
+        }
 
         default:
           break;
