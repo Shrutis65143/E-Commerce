@@ -8,30 +8,25 @@ import productRouter from './routes/productRoute.js'
 import cartRouter from './routes/cartRoute.js'
 import orderRouter from './routes/orderRoute.js'
 
-// Connect to DB and Cloudinary
+// APP Config
+const app = express()
+const port = process.env.PORT || 4000
 connectDB();
 connectCloudinary();
 
-// App Config
-const app = express();
+// middlewars
+app.use(express.json())
+app.use(cors())
 
-// Middleware
-app.use(express.json());
-app.use(cors());
+// Api endpoints
+app.use('/api/user', userRouter)
+app.use('/api/product', productRouter)
+app.use('/api/cart',cartRouter)
+app.use('/api/order', orderRouter)
 
-// Routes
-app.use('/api/user', userRouter);
-app.use('/api/product', productRouter);
-app.use('/api/cart', cartRouter);
-app.use('/api/order', orderRouter);
 
-// Test route
-app.get('/', (req, res) => {
-  res.send('API Working');
-});
+app.get('/', (req,res)=>{
+    res.send("API Working")
+})
 
-// ❌ Don't do this on Vercel
-// app.listen(port, () => console.log('Server started on port: ' + port));
-
-// ✅ Instead, export the app for Vercel
-export default app;
+app.listen(port, ()=> console.log('Server started on port: '+ port))
