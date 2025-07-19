@@ -9,7 +9,8 @@ const Footer = () => {
         <div>
             <img src={assets.logosss} className='mb-5 w-32' alt="" />
             <p className='w-full md:w-2/3 text-gray-600'>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, minima consequatur. Mollitia ad dicta ullam ducimus fugiat? Illum quas quibusdam, dolor nihil animi minus quos corporis expedita dolores at rerum velit sint veritatis iste, quisquam eligendi distinctio amet praesentium dicta?
+             Anyone is a full-featured eCommerce web application built to bring a fast, personalized, and user-friendly shopping experience to your fingertips. Designed for modern consumers, ShopEase offers everything from product discovery to secure checkout, all wrapped in a sleek and responsive interface.
+           
             </p>
         </div>
 
@@ -28,7 +29,7 @@ const Footer = () => {
             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
             <ul className='flex flex-col gap-1 text-gray-600'>
                 <li>+1-212-456-7890</li>
-                <li>contact@forever.com</li>
+                <li>contact@Anyone.com</li>
 
             </ul>
         </div>
@@ -36,7 +37,7 @@ const Footer = () => {
 
       <div>
         <hr />
-        <p className='py-5 text-sm text-center'>Copyright 2024@ anyone.com - All Right Reserved</p>
+        <p className='py-5 text-sm text-center'>Copyright 2025@ anyone.com - All Right Reserved</p>
       </div>
     </div>
   )

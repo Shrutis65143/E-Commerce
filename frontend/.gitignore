@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+# Ignore all node_modules folders
+*/node_modules/
+
+# Ignore all .env files
+**/.env
+=======
 # Logs
 logs
 *.log
@@ -22,3 +29,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+>>>>>>> c03fdd2 (Initial commit - Ecommerce app)
