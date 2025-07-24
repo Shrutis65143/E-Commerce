@@ -14,7 +14,7 @@ const About = () => {
       <div className='my-10 flex flex-col md:flex-row gap-16'>
            <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
            <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab dolore rerum quia animi, odit nostrum quae consectetur, nisi modi, rem veritatis libero necessitatibus maiores odio dolor perferendis facere suscipit.</p>
+            <p> ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab dolore rerum quia animi, odit nostrum quae consectetur, nisi modi, rem veritatis libero necessitatibus maiores odio dolor perferendis facere suscipit.</p>
            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum repellendus aspernatur ipsam laborum deserunt voluptatibus nesciunt aliquid ex neque perspiciatis, placeat sunt facilis amet, nihil voluptate accusantium possimus debitis cum.</p>
            <b className='text-gray-800'>Our Mission</b>
            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, accusantium expedita? Officiis quibusdam doloremque ex maxime tempora ea possimus minus.</p>
@@ -27,7 +27,7 @@ const About = () => {
       <div className='flex flex-col md:flex-row text-sm mb-20'>
         <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
           <b>Quality Assurance:</b>
-          <p className='text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vitae aliquid illo minus, molestias a sequi obcaecati voluptate iste rerum?</p>
+          <p className='text-gray-600'>Trendy, high-quality apparel for men, women, and children—shop now!</p>
         </div>
 
         <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
