@@ -14,7 +14,7 @@ const About = () => {
       <div className='my-10 flex flex-col md:flex-row gap-16'>
            <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
            <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
-            <p>An eCommerce app is a user-friendly platform that enables customers to shop online anytime, anywhere. It offers features like product browsing, secure payments, order tracking, and personalized recommendations. Designed for convenience and speed, the app enhances the shopping experience with intuitive navigation, fast checkouts, and responsive customer support.
+            <p>An eCommerce app is a user-friendly platform that enables customers  to shop online anytime, anywhere. It offers features like product browsing, secure payments, order tracking, and personalized recommendations. Designed for convenience and speed, the app enhances the shopping experience with intuitive navigation, fast checkouts, and responsive customer support.
 </p>
            <b className='text-gray-800'>Our Mission</b>
            <p>To deliver an exceptional online shopping experience by offering high-quality products, unbeatable value, and outstanding customer service. We aim to make shopping easy, enjoyable, and accessible for everyone, everywhere.</p>
