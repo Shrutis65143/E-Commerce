@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <img src={assets.logosss} className='mb-5 w-32' alt="" />
             <p className='w-full md:w-2/3 text-gray-600'>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, minima consequatur. Mollitia ad dicta ullam ducimus fugiat? Illum quas quibusdam, dolor nihil animi minus quos corporis expedita dolores at rerum velit sint veritatis iste, quisquam eligendi distinctio amet praesentium dicta?
+          Anyone is a user-friendly e-commerce mobile and web application that allows customers to browse, search, and purchase products from categories such as fashion, and more. The app provides a seamless shopping experience with secure payments, real-time order tracking, and personalized recommendations.
             </p>
         </div>
 
