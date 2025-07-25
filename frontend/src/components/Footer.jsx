@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <img src={assets.logosss} className='mb-5 w-32' alt="" />
             <p className='w-full md:w-2/3 text-gray-600'>
-          Anyone is a user-friendly e-commerce mobile and web application that allows customers to browse, search, and purchase products from categories such as fashion, and more. The app provides a seamless shopping experience with secure payments, real-time order tracking, and personalized recommendations.
+          Anyone is a user-friendly e-commerce mobile and web application that allows customers to browse,search, and purchase products from categories such as fashion, and more. The app provides a seamless shopping experience with secure payments, real-time order tracking, and personalized recommendations.
             </p>
         </div>
 
